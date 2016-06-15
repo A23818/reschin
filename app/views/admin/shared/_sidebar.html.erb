@@ -1,0 +1,35 @@
+
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <div class="pull-left">
+        <a href="#">
+          Admin
+        </a>
+      </div>
+
+    </li>
+    <li>
+      <%= link_to 'Banner', admin_banners_path %>
+    </li>
+    <li>
+      <%= link_to 'Article', admin_articles_path %>
+    </li>
+    <li>
+      <%= link_to 'Category', admin_categories_path %>
+    </li>
+    <li>
+      <%= link_to 'Restaurant', admin_restaurants_path %>
+    </li>
+    <li>
+      <a href="#">Location</a>
+    </li>
+
+    <li>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    </li>
+
+  </ul>
+</div>
+<!-- /#sidebar-wrapper -->

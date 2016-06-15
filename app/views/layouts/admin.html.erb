@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reschin</title>
+  <%= stylesheet_link_tag    'admin/admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'admin/admin', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+
+<div id="wrapper">
+  <%= render 'admin/shared/sidebar' %>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+      <%= render 'admin/shared/header' %>
+      <div class="col-md-12" id="admin-page-content">
+          <%= yield %>
+      </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Menu Toggle Script -->
+<script>
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+</script>
+
+
+</body>
+</html>
